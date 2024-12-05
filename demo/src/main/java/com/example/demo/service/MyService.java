@@ -31,6 +31,9 @@ public class MyService {
         this.objectMapper = objectMapper;
         this.recipeRepository = recipeRepository;
     }
+    public List<Recipe> searchRecipes(String keyword) {
+        return recipeRepository.searchRecipes(keyword);
+    }
 
     public void fetchAndSaveRecipes() {
         List<RecipeDTO> recipeDTOs = webClient.get()
