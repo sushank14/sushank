@@ -17,18 +17,20 @@ import java.util.List;
 public class Recipe{
 
     @Id
-    private long id;
+    private Long id;
 
     private String name;
 
     @ElementCollection
+    @Lob
     @CollectionTable(name = "recipe_ingredients", joinColumns = @JoinColumn(name = "recipe_id"))
-    @Column(name = "ingredient")
+    @Column(name = "ingredient", columnDefinition = "TEXT")
     private List<String> ingredients;
 
     @ElementCollection
+    @Lob
     @CollectionTable(name = "recipe_instructions", joinColumns = @JoinColumn(name = "recipe_id"))
-    @Column(name = "instruction")
+    @Column(name = "instruction", columnDefinition = "TEXT")
     private List<String> instructions;
 
     private int prepTimeMinutes;
@@ -39,13 +41,14 @@ public class Recipe{
     private int caloriesPerServing;
 
     @ElementCollection
+    @Lob
     @CollectionTable(name = "recipe_tags", joinColumns = @JoinColumn(name = "recipe_id"))
-    @Column(name = "tag")
+    @Column(name = "tag",columnDefinition = "TEXT")
     private List<String> tags;
 
     private int userId;
     private String image;
-    private float rating;
+    private Double rating;
     private int reviewCount;
 
     @ElementCollection

@@ -9,23 +9,23 @@ import java.util.List;
 
 @Getter@Setter
 @AllArgsConstructor@NoArgsConstructor
-public class RecipeVo {
+public class RecipeDTO {
 
-    private long id;
+    private Long id;
     private String name;
     private List<String> ingredients;
     private List<String> instructions;
-    private int prepTimeMinutes;
-    private int cookTimeMinutes;
-    private int servings;
+    private Integer prepTimeMinutes;
+    private Integer cookTimeMinutes;
+    private Integer servings;
     private String difficulty;
     private String cuisine;
-    private int caloriesPerServing;
+    private Integer caloriesPerServing;
     private List<String> tags;
-    private int userId;
+    private Long userId;
     private String image;
-    private float rating;
-    private int reviewCount;
+    private Double rating;
+    private Integer reviewCount;
     private List<String> mealType;
 
 

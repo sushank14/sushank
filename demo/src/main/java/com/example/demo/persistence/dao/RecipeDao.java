@@ -12,7 +12,6 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Component
-@Slf4j
 public class RecipeDao {
 
     private static final Logger log = LoggerFactory.getLogger(RecipeDao.class);
